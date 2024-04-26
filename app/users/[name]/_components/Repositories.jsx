@@ -3,6 +3,8 @@
 import styled from "styled-components";
 
 export default function Repositories({ repos }) {
+    const formattedDate = (dateString) => new Intl.DateTimeFormat("ko-KR").format(new Date(dateString));
+
     return (
         <RepositoriesDiv>
             {repos.map((repo, idx) => (
@@ -14,7 +16,7 @@ export default function Repositories({ repos }) {
                     <p>{repo.description}</p>
                     <div>
                         {repo.language && <span className="language">{repo.language}</span>}
-                        <span>Updated on {repo.updated_at}</span>
+                        <span>Updated on {formattedDate(repo.updated_at)}</span>
                     </div>
                 </li>
             ))}
