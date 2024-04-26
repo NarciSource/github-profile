@@ -28,6 +28,7 @@ const RepositoriesDiv = styled.div`
     width: 100%;
     color: #636c76;
     font-size: 13px;
+    margin: 0 2rem;
 
     li {
         width: 100%;

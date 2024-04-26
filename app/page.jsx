@@ -8,5 +8,5 @@ export default function Home() {
 
 const HomeImg = styled.img`
     display: block;
-    margin: 5% auto;
+    margin: 25% auto;
 `;

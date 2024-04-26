@@ -28,9 +28,10 @@ export default function Profile({ user }) {
 }
 
 const ProfileDiv = styled.div`
-    width: 15%;
-    margin: 50px;
+    width: 300px;
+    padding: 50px;
     color: #636c76;
+    align-self: center;
 
     strong {
         font-size: 24px;
