@@ -14,9 +14,9 @@ export default async function User({ params }) {
     const repos = repos_response.data;
 
     return (
-        <div>
+        <>
             <Profile user={user} />
             <Repositories repos={repos} />
-        </div>
+        </>
     );
 }
