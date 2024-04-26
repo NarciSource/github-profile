@@ -15,11 +15,11 @@ export default function Profile({ user }) {
                 </h1>
             </div>
             <div className="relation">
-                <a href={user.followers_url}>
+                <a href={`https://github.com/${user.name}?tab=followers`}>
                     <b>{user.followers}</b> followers
                 </a>
                 &nbsp;·&nbsp;
-                <a href={user.following_url}>
+                <a href={`https://github.com/${user.name}?tab=following`}>
                     <b>{user.following}</b> following
                 </a>
             </div>
@@ -28,7 +28,7 @@ export default function Profile({ user }) {
 }
 
 const ProfileDiv = styled.div`
-    width: 300px;
+    width: 15%;
     margin: 50px;
     color: #636c76;
 

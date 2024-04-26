@@ -1,14 +1,13 @@
-import axios from "axios";
+import fetchCall from "./fetchCall";
 
-export default async function getRepos(name) {
+export default async function getProfile(name) {
     const repos_url = `https://api.github.com/users/${name}/repos?sort=updated`;
-
-    const repos_response = await axios(repos_url, {
+    const options = {
         method: "GET",
         headers: {
             Authorization: process.env.REACT_APP_GITHUB_AUTH,
         },
-    });
+    };
 
-    return repos_response.data;
+    return await fetchCall(repos_url, options);
 }

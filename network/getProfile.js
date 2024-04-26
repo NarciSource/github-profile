@@ -1,14 +1,13 @@
-import axios from "axios";
+import fetchCall from "./fetchCall";
 
 export default async function getProfile(name) {
     const profile_url = `https://api.github.com/users/${name}`;
-
-    const profile_response = await axios(profile_url, {
+    const options = {
         method: "GET",
         headers: {
             Authorization: process.env.REACT_APP_GITHUB_AUTH,
         },
-    });
+    };
 
-    return profile_response.data;
+    return await fetchCall(profile_url, options);
 }
