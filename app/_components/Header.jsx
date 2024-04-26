@@ -11,7 +11,7 @@ export default function Header() {
 
     return (
         <HeaderDiv>
-            <FaGithub size="36" />
+            <FaGithub color="white" size="36" />
             <input
                 value={name}
                 placeholder="User Search"
