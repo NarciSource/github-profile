@@ -11,14 +11,14 @@ export default function Header() {
 
     return (
         <HeaderDiv>
-            <FaGithub color="white" size="36" />
+            <FaGithub className="go-home" color="white" size="36" onClick={() => router.push("/")} />
             <input
                 value={name}
                 placeholder="User Search"
                 onChange={(e) => setName(e.target.value)}
                 onKeyDown={(e) => {
                     if (e.key == "Enter") {
-                        router.push(`users/${name}`);
+                        router.push(`/users/${name}`);
                     }
                 }}
             />
@@ -31,6 +31,9 @@ const HeaderDiv = styled.div`
     padding: 15px;
     display: flex;
 
+    .go-home {
+        cursor: pointer;
+    }
     input {
         align-self: center;
         background-color: hsla(0, 0%, 100%, 0.125);
